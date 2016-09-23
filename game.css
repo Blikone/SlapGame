@@ -3,11 +3,10 @@ body{
   background-size: cover;
 }
 
-.stage{
-  display:flex;
-  align-items: center;
-  justify-content: space-around;
+.weapon-icon{
+    height: 100px;
 }
+
 .player{
   display: flex;
 }
@@ -20,6 +19,6 @@ h1{
 }
 
 .tree {
-    height: 50vh;
+    height: 75vh;
     text-align: center;
 }

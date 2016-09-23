@@ -2,6 +2,7 @@ var health = 100;
 var slap = 5;
 var punch = 10;
 var kick = 20;
+var secondTree = false;
 
 function onSlap() {
   health -= slap;
@@ -21,6 +22,7 @@ function onKick() {
 function reset() {
   health = 100;
   update();
+  secondTree = true;
   return health;
 }
 
