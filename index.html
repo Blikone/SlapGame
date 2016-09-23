@@ -1,11 +1,29 @@
 <html>
 <head>
 	<title>Slap Object Game</title>
-	<link rel="stylesheet" href="">
-	<link rel="stylesheet" href="">
-	<script src=""></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="game.css">
 </head>
 <body>
+	<div class="stage">
+		<div class="tree-well">
+			<img src="./images/tree-trunk-2.png" class="tree" alt="Attack!!!">
+		</div>
+
+		<div class="player">
+		
+			<button onclick = "useHatchet()">Hatchet</button>
+			<button onclick = "useAxe()">Axe</button>
+			<button onclick = "useSaw()">Saw</button>
+			<button onclick = "useChainsaw">Chainsaw</button>
+			<button onclick = "reset()">Reset</button>
+		</div>
+	</div>
+
 	
+
+
+	
+	<script src="game.js"></script>
 </body>
 </html>
