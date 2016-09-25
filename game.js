@@ -1,9 +1,27 @@
+var weapons = [
+    {name: 'hatchet', damage: 1, fatigue: 1},
+    {name: 'axe', damage: 4, fatigue: 3},
+    {name: 'saw', damage: 12, fatigue: 7},
+    {name: 'chainsaw', damage: 25, fatigue: 2}
+]
 var health = 100;
-var hatchet = 1;
-var axe = 4;
-var saw = 12;
-var chainsaw = 25;
-var weaponInUse = '';
+var hitCount = 0;
+var adjustedHitCount = 0;
+var weaponSelector;
+var weaponInUse = document.getElementById('weapon-in-use');
+var attrition = function(count) {
+    if(count > 50) {
+        return 0.4;
+    }else if(count > 40) {
+        return 0.5;
+    }else if(count > 30) {
+        return 0.65;
+    }else if(count > 20) {
+        return 0.8;
+    }else{
+        return 1;
+    }
+}
 
 var showChainsaw = function() {
     var chainsawButton = document.getElementById('chainsaw');
@@ -16,38 +34,38 @@ function Feller() {
     self.fatigue = 0;
 }
 
-var useHatchet = function() {
-    weaponInUse = 'Hatchet';
-    health -= hatchet;
+var attack = function() {
+    hitCount++;
+    health -= (weapons[weaponSelector].damage * attrition(hitCount));
     update();
+    adjustedHitCount += weapons[weaponSelector].fatigue;
+    // fatigue += weapons[weaponSelector].fatigue;
     return health;
+}
+
+var useHatchet = function() {
+    weaponInUse.innerText = 'Use Hatchet';
+    weaponSelector = 0;
 }
 var useAxe = function() {
-    weaponInUse = 'Axe';
-    health -= axe;
-    update();
-    return health;
+    weaponInUse.innerText = 'Use Axe';
+    weaponSelector = 1;
 }
 var useSaw = function() {
-    weaponInUse = 'Saw';
-    health -= saw;
-    update();
-    return health;
+    weaponInUse.innerText = 'Use Saw';
+    weaponSelector = 2;
 }
 var useChainsaw = function() {
-    weaponInUse = 'Chainsaw';
-    health -= chainsaw;
-    update();
-    return health
-}
-var attack = function() {
-
+    weaponInUse.innerText = 'Use Chainsaw';
+    weaponSelector = 3;
 }
 
 var reset = function() {
-    debugger;
     health = 100;
+    hitCount = 0;
+    adjustedHitCount *= 0.25;
     update();
+    weaponInUse.innerText = ''
     if (document.getElementById('chainsaw').className.indexOf('hidden') > -1) {
         showChainsaw();
     }

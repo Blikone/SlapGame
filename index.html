@@ -26,15 +26,15 @@
 				</div>
 				<div class="attack-button-well">
 					<div class="weapon-in-use">
-						<p id="weapon-in-use">Use Hatchet</p>
+						<p id="weapon-in-use"></p>
 					</div>
-					<button type="button" class="btn btn-default attack-button">ATTACK!!!</button>
+					<button type="button" class="btn btn-default attack-button" onclick = "attack()">ATTACK!!!</button>
 				</div>
 				<div class="btn-group" role="group" aria-label="weapon selector">
 					<button type="button" class="btn btn-default" onclick = "useHatchet()"><img src="./images/hatchet.png" class="weapon-icon" alt="Hatchet"></button>
 					<button type="button" class="btn btn-default" onclick = "useAxe()"><img src="./images/axe.png" class="weapon-icon" alt="Axe"></button>
 					<button type="button" class="btn btn-default" onclick = "useSaw()"><img src="./images/saw.png" class="weapon-icon" alt="Saw"></button>
-					<button type="button" class="btn btn-default hidden" onclick = "useChainsaw" id="chainsaw"><img src="./images/chainsaw.png" class="weapon-icon" alt="Chainsaw"></button>
+					<button type="button" class="btn btn-default hidden" onclick = "useChainsaw()" id="chainsaw"><img src="./images/chainsaw.png" class="weapon-icon" alt="Chainsaw"></button>
 					<button type="button" class="btn btn-default reset-button" onclick = "reset()">New Tree</button>
 				</div>
 			</div>
