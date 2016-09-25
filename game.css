@@ -52,3 +52,14 @@ body{
     bottom: 0;
     width: 150px;
 }
+
+.feller, .attack-button-well{
+    display: inline-block;
+}
+.attack-button{
+    font-size: 48px;
+    color: red;
+}
+.reset-button{
+    height: 114px;
+}

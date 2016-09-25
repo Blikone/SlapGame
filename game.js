@@ -36,6 +36,7 @@ function useChainsaw() {
     return health
 }
 function reset() {
+    debugger;
     health = 100;
     update();
     if (document.getElementById('chainsaw').className.indexOf('hidden') > -1) {
@@ -48,7 +49,7 @@ function update() {
     if (health <= 0) {
         health = 0;
     }
-    // var healthElem = document.getElementById('health');
-    // healthElem.innerHTML = health;
+    var healthBar = document.getElementById('progress-bar');
+    healthBar.setAttribute("style", "height: " + health + "%");
 }
 
