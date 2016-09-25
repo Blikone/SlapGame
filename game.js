@@ -12,7 +12,7 @@ var showChainsaw = function() {
 }
 
 function Feller() {
-
+    self.fatigue = 0;
 }
 
 function useHatchet() {

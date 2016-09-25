@@ -5,20 +5,24 @@
 	<link rel="stylesheet" href="game.css">
 </head>
 <body>
-	<div class="stage">
-		<div class="tree-well">
-			<img src="./images/tree-trunk-2.png" class="tree" align="middle" alt="Attack!!!">
-		</div>
-		<div class="progress">
-			<div class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-vauemax="100"></div>
-		</div>
-		<div class="btn-group" role="group" aria-label="weapon selector">
-		
-			<button type="button" class="btn btn-default" onclick = "useHatchet()"><img src="./images/hatchet.png" class="weapon-icon" alt="Hatchet"></button>
-			<button type="button" class="btn btn-default" onclick = "useAxe()"><img src="./images/axe.png" class="weapon-icon" alt="Axe"></button>
-			<button type="button" class="btn btn-default" onclick = "useSaw()"><img src="./images/saw.png" class="weapon-icon" alt="Saw"></button>
-			<button type="button" class="btn btn-default hidden" onclick = "useChainsaw" id="chainsaw"><img src="./images/chainsaw.png" class="weapon-icon" alt="Chainsaw"></button>
-			<button type="button" onclick = "reset()">New Tree</button>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-6 tree-well">
+				<img src="./images/tree-trunk-2.png" class="tree" alt="Attack!!!">
+				<div class="progress health-bar vertical">
+					<div class="progress-bar progress-bar-success" role="progressbar" height="75%"></div>
+				</div>
+			</div>
+			<div class="col-xs-6 feller-well">
+				<div class="feller"><img src="./images/lumberjack.png" class="feller-pic" alt="lumberjack"></div>
+				<div class="btn-group" role="group" aria-label="weapon selector">
+					<button type="button" class="btn btn-default" onclick = "useHatchet()"><img src="./images/hatchet.png" class="weapon-icon" alt="Hatchet"></button>
+					<button type="button" class="btn btn-default" onclick = "useAxe()"><img src="./images/axe.png" class="weapon-icon" alt="Axe"></button>
+					<button type="button" class="btn btn-default" onclick = "useSaw()"><img src="./images/saw.png" class="weapon-icon" alt="Saw"></button>
+					<button type="button" class="btn btn-default hidden" onclick = "useChainsaw" id="chainsaw"><img src="./images/chainsaw.png" class="weapon-icon" alt="Chainsaw"></button>
+					<button type="button" class="btn btn-default weapon-icon" onclick = "reset()">New Tree</button>
+				</div>
+			</div>
 		</div>
 	</div>
 
