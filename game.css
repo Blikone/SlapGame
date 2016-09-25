@@ -6,6 +6,9 @@ body{
   background: url(./images/forest.jpg) center center;
   background-size: cover;
 }
+.left-well{
+    padding-left: 0;
+}
 
 .weapon-icon{
     height: 100px;
@@ -62,4 +65,9 @@ body{
 }
 .reset-button{
     height: 114px;
+}
+.weapon-in-use{
+    color: white;
+    font-size: 37px;
+    text-align: center;
 }

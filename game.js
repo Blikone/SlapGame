@@ -3,6 +3,7 @@ var hatchet = 1;
 var axe = 4;
 var saw = 12;
 var chainsaw = 25;
+var weaponInUse = '';
 
 var showChainsaw = function() {
     var chainsawButton = document.getElementById('chainsaw');
@@ -15,27 +16,35 @@ function Feller() {
     self.fatigue = 0;
 }
 
-function useHatchet() {
+var useHatchet = function() {
+    weaponInUse = 'Hatchet';
     health -= hatchet;
     update();
     return health;
 }
-function useAxe() {
+var useAxe = function() {
+    weaponInUse = 'Axe';
     health -= axe;
     update();
     return health;
 }
-function useSaw() {
+var useSaw = function() {
+    weaponInUse = 'Saw';
     health -= saw;
     update();
     return health;
 }
-function useChainsaw() {
+var useChainsaw = function() {
+    weaponInUse = 'Chainsaw';
     health -= chainsaw;
     update();
     return health
 }
-function reset() {
+var attack = function() {
+
+}
+
+var reset = function() {
     debugger;
     health = 100;
     update();
