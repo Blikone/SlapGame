@@ -16,18 +16,7 @@ body{
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: "FlipH";
     height: 50vh;
-    text-align: center;
-}
-
-.vertical{
-    width: 100%;
-    height: 40px;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    display: inline-block;
 }
 
 .hidden{
@@ -36,9 +25,30 @@ body{
 
 .tree {
     height: 100vh;
+}
+.tree-well, .container{
     display: inline-block;
 }
 
-.progress-bar{
-    height: 40px;
+.progress-bar-vertical {
+    width: 100px;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    float: left;
+    margin: 0;
+}
+
+.progress-bar-vertical .progress-bar {
+    width: 100%;
+    height: 0;
+}
+.progress{
+    background: none;
+}
+
+.container{
+    position:absolute;
+    bottom: 0;
+    width: 150px;
 }
