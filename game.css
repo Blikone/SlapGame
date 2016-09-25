@@ -1,6 +1,6 @@
-*{
+/**{
     outline: solid 1px red;
-}
+}*/
 
 body{
   background: url(./images/forest.jpg) center center;
@@ -50,10 +50,20 @@ body{
     background: none;
 }
 
+.timber-well{
+    text-align: center;
+}
+.timber{
+    color: red;
+    font-size: 70px;
+    margin: 80px auto 0 auto;
+}
+
 .container{
     position:absolute;
     bottom: 0;
     width: 150px;
+    padding: 0;
 }
 
 .feller, .attack-button-well{

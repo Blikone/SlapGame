@@ -7,16 +7,26 @@
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-xs-6 left-well">
-				<div class="tree-well">
-					<img src="./images/tree-trunk-2.png" class="tree" alt="Attack!!!">
-				</div>
-				<div class="container">
-					<div class="progress-bar-well">
-						<div class="progress progress-bar-vertical">
-							<div class="progress-bar" id="progress-bar" role="progressbar" style="height: 100%;">
+			<div class="col-xs-6 left-well" id="left-well">
+				<div id="live-tree">
+					<div class="tree-well">
+						<img src="./images/tree-trunk-2.png" class="tree" alt="Attack!!!">
+					</div>
+					<div class="container">
+						<div class="progress-bar-well">
+							<div class="progress progress-bar-vertical">
+								<div class="progress-bar" id="progress-bar" role="progressbar" style="height: 100%;">
+								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="hidden" id = "dead-tree">
+					<div class="timber-well">
+						<p class="timber">TIMBERRRRRR!!!</p>
+					</div>
+					<div class="tree-well">
+						<img src="./images/felled-tree.png" class="felled-tree" alt="It's over!">
 					</div>
 				</div>
 			</div>

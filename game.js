@@ -39,7 +39,6 @@ var attack = function() {
     health -= (weapons[weaponSelector].damage * attrition(hitCount));
     update();
     adjustedHitCount += weapons[weaponSelector].fatigue;
-    // fatigue += weapons[weaponSelector].fatigue;
     return health;
 }
 
@@ -66,6 +65,8 @@ var reset = function() {
     adjustedHitCount *= 0.25;
     update();
     weaponInUse.innerText = ''
+    document.getElementById('dead-tree').className = 'hidden';
+    document.getElementById('live-tree').className = '';
     if (document.getElementById('chainsaw').className.indexOf('hidden') > -1) {
         showChainsaw();
     }
@@ -75,6 +76,8 @@ var reset = function() {
 function update() {
     if (health <= 0) {
         health = 0;
+        document.getElementById('live-tree').className = 'hidden';
+        document.getElementById('dead-tree').className = '';
     }
     var healthBar = document.getElementById('progress-bar');
     healthBar.setAttribute("style", "height: " + health + "%");
