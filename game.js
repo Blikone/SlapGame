@@ -81,5 +81,6 @@ function update() {
     }
     var healthBar = document.getElementById('progress-bar');
     healthBar.setAttribute("style", "height: " + health + "%");
+
 }
 
